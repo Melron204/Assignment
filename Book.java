@@ -1,29 +1,49 @@
-package com.montran.mojo;
+package com.montran.pojo;
 
-public class Book extends Object{
-	private int BookNo ; 
-	private String BookTitle ; 
-	private Double Price ;
-	
-	
-public void input(int BookNo , String BookTitle, double Price) {
-	this.BookNo=BookNo;
-	this.BookTitle=BookTitle;
-	this.Price=Price;
-}
-	private double TotalCost(int N) {
-		
-		return Price*N;
-		
-	}
-	public double Purchase(int n) {
-		return TotalCost(n);
+public class Book {
+	private int bookId;
+	private String name;
+	private double price;
+	public static int bookIdInitial = 100;
+
+	public Book() {
+		// TODO Auto-generated constructor stub
 	}
 
+	public Book(int bookId, String name, double price) {
+		super();
+		this.bookId = bookId;
+		this.name = name;
+		this.price = price;
+	}
+
+	public int getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	@Override
 	public String toString() {
-		return "Book Details [Book No=" + BookNo + ", name=" + BookTitle + ", price=" + Price + "]";
+		return "Book [bookId=" + bookId + ", name=" + name + ", price=" + price + "]";
 	}
 
 }
-
-
